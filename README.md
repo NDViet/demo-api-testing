@@ -43,6 +43,10 @@ This is a very simple API you can use for learning API Testing. It is built usin
       ```bash
       docker build -t localhost/demo-api-testing:latest .
       ```
+    * Build multi-arch image (advanced)
+      ```bash
+      docker buildx build --platform linux/amd64,linux/arm64/v8,linux/arm/v7 -t localhost/demo-api-testing:latest .
+      ```
     * Run the container
       ```bash
       docker run --rm --name demo-api-testing -p 5002:5002 localhost/demo-api-testing:latest
